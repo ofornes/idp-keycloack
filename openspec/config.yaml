@@ -1,0 +1,63 @@
+schema: spec-driven
+
+context: |
+  Language: Catalan
+  Write in Catalan but:
+    - Keep technical terms like "API", "REST", "GraphQL" in English
+    - Code examples, file paths, Types and java methods and properties remain in English
+  Domain: Project manager agile and kanban project
+  Tech stack:
+    | Component       | Technology                         | Version    |
+    | --------------- | ---------------------------------- | ---------- |
+    | Language        | Java                               | 25 graalvm |
+    | Framework       | Spring Boot                        | 4          |
+    | Build Tool      | Maven                              | -          |
+    | Database        | MongoDB                            | 8          |
+    | Testing         | JUnit 5 + Mockito + Testcontainers | -          |
+    | Version control | git                                | -          |
+    | Code Assist     | lombok                             | 1.18.42    |
+    | Logging         | Logback with SLF4J interface       | 1.5.32     |
+    | Validation      | Jakarta validation annotations     | -          |
+  Principles:
+    - Use conventional commits, version 1.0.0
+    - Use semantic Version, version 2.0.0
+    - API: RESTful, documented in docs/api.md
+    - Use API versioned path correlated with MAJOR version of project
+    - Use gitflow with master as the main branch as explained here https://nvie.com/posts/a-successful-git-branching-model/
+  Basic conventions:
+    - **Immutability where possible** - Prefer immutable objects, use final fields
+    - **Constructor injection** - Always use constructor injection with lombok for dependencies
+    - **Single responsibility** - Each class should have one reason to change
+    - **Open-Closed principle** - Each class should be open for extension, but closed for modification
+    - **Liskov substitution** - Subtypes must be substitutable for their base types without altering the correctness of the program
+    - **Interface segregation principle** - Each interface -contracts- should have only the minimum and related operations as possible
+    - **Dependency inversion principle** - The dependencies should be expressed by interfaces, not implementations
+    - **Meaningful names** - Variables, methods, and classes should be self-documenting
+    - **Small methods** - Methods should do one thing and do it well
+    - **Avoid null** - Use `java.util.Optional` as needed to avoid null
+    - **Use validation constrains at methods** - With `@NotNull` on objects return and `@Validated` on implementation classes
+  Lombok usage:
+    - Use lombok `@SuperBuilder` with `toBuilder` for models
+    - Use `@RequiredArgsConstructor` for constructor injection with final fields
+    - Use `@Slf4j` for LOGGERS, create the 'lombok.config' file with 'lombok.log.fieldName=LOGGER' if needed 
+  Naming conventions:
+    - Use suffix `Controller` for HTTP controllers
+    - Use suffix `Configuration` for Spring configuration classes
+    - USe suffix `Properties` for spring java models configuration properties
+    - Use suffix `Service` for service interface
+    - Use suffix `Impl` for service implementations
+    - Separate service interface from implementations in different packages
+    - Use suffix `Bean` for java models
+    - Use suffix `Test` for unit test
+    - Use suffix `IntegrationTest` for integration test
+    - Test methods pattern: `methodUnderTest_condition_expectedResult`
+rules:
+  proposal:
+    - Include rollback plan for risky changes
+  specs:
+    - Use Given/When/Then format for scenarios
+    - Reference existing patterns before inventing new ones
+  design:
+    - Include sequence diagrams for complex flows
+  tasks:
+    - Break tasks into chunks of max 2 hours

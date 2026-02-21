@@ -15,10 +15,18 @@
 	<description>IDP for Keycloak</description>
 	<url/>
 	<licenses>
-		<license/>
+		<license>
+			<name>gpl-3.0</name>
+			<url>https://www.gnu.org/licenses/gpl-3.0.md</url>
+			<distribution>repo</distribution>
+		</license>
 	</licenses>
 	<developers>
-		<developer/>
+		<developer>
+			<id>ofornes</id>
+			<name>Octavi Fornés</name>
+			<email>octavi@fornes.cat</email>
+		</developer>
 	</developers>
 	<scm>
 		<connection/>
