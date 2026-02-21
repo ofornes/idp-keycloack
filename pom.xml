@@ -10,10 +10,9 @@
 	</parent>
 	<groupId>cat.ofornes</groupId>
 	<artifactId>idp-keycloak</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>idp-keycloak</name>
 	<description>IDP for Keycloak</description>
-	<url/>
 	<licenses>
 		<license>
 			<name>gpl-3.0</name>
@@ -26,13 +25,12 @@
 			<id>ofornes</id>
 			<name>Octavi Fornés</name>
 			<email>octavi@fornes.cat</email>
+			<timezone>CET DST</timezone>
 		</developer>
 	</developers>
 	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
+		<connection>scm:git:https://github.com/ofornes/idp-keycloack.git</connection>
+		<developerConnection>scm:git:https://github.com/ofornes/idp-keycloack.git</developerConnection>
 	</scm>
 	<properties>
 		<java.version>25</java.version>
